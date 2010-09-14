@@ -12,3 +12,12 @@ function tm() {
   cd $1
   mate $1
 }
+
+function tmohmy {
+  mate ~/.oh-my-zsh
+}
+
+# Basic editing of config files
+function tmz {
+  mate ~/.zshrc
+}
