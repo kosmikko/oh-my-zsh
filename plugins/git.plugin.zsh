@@ -2,7 +2,7 @@
 alias g='git'
 alias gst='git status'
 alias gl='git pull'
-alias gup='git fetch && git rebase'
+alias gup='git pull --rebase'
 alias gp='git push'
 alias gd='git diff | mate'
 alias gdv='git diff -w "$@" | vim -R -'
@@ -12,6 +12,7 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %f %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
 
 # Git and svn mix
