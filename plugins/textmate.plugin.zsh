@@ -13,11 +13,6 @@ function tm() {
   mate $1
 }
 
-function tmohmy {
-  mate ~/.oh-my-zsh
-}
-
-# Basic editing of config files
-function tmz {
-  mate ~/.zshrc
-}
+EDITOR='mate'
+export EDITOR
+alias edit=$EDITOR
