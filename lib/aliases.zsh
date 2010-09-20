@@ -24,3 +24,6 @@ alias afind='ack-grep -il'
 
 # Reload .zshrc
 alias reload='source ~/.zshrc'
+
+#count files
+alias countfiles 'find \!:1 \\! -name ".*" | wc -l'
