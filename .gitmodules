@@ -19,3 +19,12 @@
 [submodule "vim/snippets"]
 	path = vim/snippets
 	url = http://github.com/akitaonrails/snipmate-snippets.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = http://github.com/ervandew/supertab.git
+[submodule "vim/bundle/git"]
+	path = vim/bundle/git
+	url = http://github.com/tpope/vim-git.git
+[submodule "vim/bundle/NERDCommenter"]
+	path = vim/bundle/NERDCommenter
+	url = http://github.com/scrooloose/nerdcommenter.git

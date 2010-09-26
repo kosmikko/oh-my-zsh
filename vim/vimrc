@@ -92,7 +92,7 @@ endif
 " Read statusline settings from different file
 source $ZSH/vim/statusline
 
-autocmd BufWritePost $ZSH/vim/vimrc source %
+"autocmd BufWritePost $ZSH/vim/vimrc source %
 
 if v:version >= 703
     "undo settings
@@ -124,4 +124,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Sort CSS properties
+map <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
+" Ack
+map <leader>a :Ack 
 
