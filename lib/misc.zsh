@@ -20,3 +20,4 @@ alias ql='qlmanage -p 2>/dev/null'
 
 alias editohmy='$EDITOR ~/.oh-my-zsh'
 alias editz='$EDITOR ~/.zshrc'
+

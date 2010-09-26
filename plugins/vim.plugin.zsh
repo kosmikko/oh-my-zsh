@@ -1,0 +1,1 @@
+alias v="$ZSH/bin/mvim"
