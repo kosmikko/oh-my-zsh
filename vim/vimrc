@@ -11,7 +11,8 @@ set nocompatible
 " Security
 set modelines=0
 
-" Tabs/spaces
+" Tabs/spaces/indent
+set autoindent                 	" indent at the same level of the previous line
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -20,7 +21,6 @@ set expandtab
 " Basic options
 set encoding=utf-8
 set scrolloff=3
-set autoindent
 set showmode
 set showcmd
 set hidden
@@ -31,9 +31,49 @@ set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
-set relativenumber
 set laststatus=2
-set undofile
+set virtualedit=all         " allows the cursor to freely roam anywhere
+
+" Search settings
+" make searches use normal regexes
+nnoremap / /\v
+vnoremap / /\v
+let mapleader = "," "change leader key to ,
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+
+
+" Backup
+set backup 						" backups are nice ...
+set backupdir=$HOME/.vimbackup//  " but not when they clog .
+set directory=$HOME/.vimswap// 	" Same for swap files
+set viewdir=$HOME/.vimviews// 	" same but for view files
+"" Creating directories if they don't exist
+silent execute '!mkdir -p $HOME/.vimbackup'
+silent execute '!mkdir -p $HOME/.vimswap'
+silent execute '!mkdir -p $HOME/.vimviews'
+  
+
+" UI
+set cursorline  				" highlight current line
+set nu 							" Line numbers on
+set relativenumber              "display how far away each line is from 
+                                "the current one, to use e.g. d<NUMBER>d
+set showmatch                  	" show matching brackets/parenthesis
+"set list
+"set listchars=tab:▸\ ,eol:¬
+"handle long lines
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
 
 if has('gui_running')
     set guifont=Menlo:h12
@@ -48,3 +88,40 @@ if has('gui_running')
 
     highlight SpellBad term=underline gui=undercurl guisp=Orange
 endif
+
+" Read statusline settings from different file
+source $ZSH/vim/statusline
+
+autocmd BufWritePost $ZSH/vim/vimrc source %
+
+if v:version >= 703
+    "undo settings
+    set undodir=~/.vim/undofiles
+    set undofile
+
+    set colorcolumn=+1
+endif
+
+"
+" Plugins
+"
+" NERD Tree
+map <F2> :NERDTreeToggle<cr>
+let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
+
+" We don't want the snippets included with Snipmate, we have a better
+" source. If we try to load both, we get conflicts
+let g:snippets_dir='$HOME/.vim/snippets/'
+
+" Custom
+"
+" Clean whitespace with ,W
+map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+" ,w open a new vertical split and switch over to it. 
+nnoremap <leader>w <C-w>v<C-w>l
+" maps <C-[h/j/k/l]> to the commands needed to move around your splits.
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
