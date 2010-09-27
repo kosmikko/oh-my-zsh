@@ -6,5 +6,6 @@
 alias gaeup="echo $GAE_PASS|$GAE_SDK/appcfg.py update . --email=$GAE_EMAIL --passin"
 alias gaeupdate="$GAE_SDK/appcfg.py update ."
 alias gaedev="python2.5 $GAE_SDK/dev_appserver.py ."
+alias gaeapi="python2.5 $GAE_SDK/google/appengine/tools/remote_api_shell.py"
 # remove all python files in current folder
 alias rmpyc="find . -name '*.pyc' -print0|xargs -0 rm"
