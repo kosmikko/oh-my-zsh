@@ -1,0 +1,9 @@
+# COMMENT OF SCRIPT HERE
+# you can make as many tabs as you wish...
+# tab names are actually arbitrary at this point too.
+---
+- tab1:
+    - cdnet
+    - gup
+- tab2:
+    - cd /Users/mikko/Work/Projects/Netcycler-prod
