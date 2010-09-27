@@ -96,9 +96,9 @@ source $ZSH/vim/statusline
 
 if v:version >= 703
     "undo settings
-    set undodir=~/.vim/undofiles
+    set undodir=~/.vimundofiles
+    silent execute '!mkdir -p $HOME/.vimundofiles'   
     set undofile
-
     set colorcolumn=+1
 endif
 
