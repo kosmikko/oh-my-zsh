@@ -2,7 +2,7 @@
 alias g='git'
 alias gst='git status -sb'
 alias gl='git pull'
-alias gup='git pull --rebase'
+alias gup='git pull --rebase && git submodule update'
 alias gp='git push'
 alias gd='git diff | mate'
 alias gdv='git diff -w "$@" | vim -R -'
