@@ -35,4 +35,4 @@ alias ggpnp='git pull origin $(current_branch) && git push origin $(current_bran
 
 # update branch from master
 alias gupmaster='git pull origin master'
-alias gres='git reset --hard'
+alias gres='git reset --hard && git clean -f'
