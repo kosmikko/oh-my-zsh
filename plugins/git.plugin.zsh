@@ -15,6 +15,7 @@ alias gcp='git cherry-pick'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gstash='git stash'
 alias gstasha='git stash apply'
+alias gcp='git cherry-pick'
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
