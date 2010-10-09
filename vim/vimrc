@@ -130,3 +130,50 @@ map <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 " Ack
 map <leader>a :Ack 
 
+" Python & GAE settings
+" For full syntax highlighting:
+let python_highlight_all=1
+syntax on
+
+" Automatically indent based on file type: 
+"filetype indent on
+" Keep indentation level from previous line: 
+"set autoindent
+
+" Folding based on indentation: 
+set foldmethod=indent
+set nofoldenable
+
+filetype plugin on
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+
+"inoremap <Nul> <C-x><C-o>
+
+function! SuperCleverTab()
+    if strpart(getline('.'), 0, col('.') - 1) =~ '^\s*$'
+        return "\<Tab>"
+    else
+        if &omnifunc != ''
+            return "\<C-X>\<C-O>"
+        elseif &dictionary != ''
+            return "\<C-K>"
+        else
+            return "\<C-N>"
+        endif
+    endif
+endfunction
+
+inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+" CTRL+Space autocomplete keybinding:   
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+\ "\<lt>C-n>" :
+\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
+
+
