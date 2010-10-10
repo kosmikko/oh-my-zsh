@@ -9,3 +9,5 @@ function tab() {
     end tell
 EOF
 }
+
+alias f='mdfind'
