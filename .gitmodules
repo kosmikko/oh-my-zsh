@@ -28,6 +28,3 @@
 [submodule "vim/bundle/NERDCommenter"]
 	path = vim/bundle/NERDCommenter
 	url = http://github.com/scrooloose/nerdcommenter.git
-[submodule "vim/bundle/pydiction"]
-	path = vim/bundle/pydiction
-	url = http://github.com/vim-scripts/Pydiction.git

@@ -176,4 +176,4 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 imap <C-@> <C-Space>
 
-
+let g:pydiction_location = '$HOME/.vim/bundle/pydiction/complete-dict'
