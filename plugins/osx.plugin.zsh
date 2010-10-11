@@ -11,3 +11,4 @@ EOF
 }
 
 alias f='mdfind'
+alias gitx='/Applications/Work/GitX.app/Contents/MacOS/GitX . &'

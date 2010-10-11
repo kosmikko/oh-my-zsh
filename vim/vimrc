@@ -2,16 +2,20 @@
 "source $ZSH/vim/vimrc
 "make link ln -s .oh-my-zsh/vim .vim
 
+" ensure pathogen is invoked before
 filetype off
 call pathogen#runtime_append_all_bundles()
-filetype plugin indent on
 
 set nocompatible
+
+" Set to auto read when a file is changed from the outside
+set autoread
 
 " Security
 set modelines=0
 
 " Tabs/spaces/indent
+" set tab stop to 4 chars (python), expand tabs into spaces
 set autoindent                 	" indent at the same level of the previous line
 set tabstop=4
 set shiftwidth=4
@@ -33,6 +37,8 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 set virtualedit=all         " allows the cursor to freely roam anywhere
+filetype plugin on
+filetype indent on   
 
 " Search settings
 " make searches use normal regexes
@@ -114,6 +120,7 @@ let NERDTreeIgnore=['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$']
 let g:snippets_dir='$HOME/.vim/snippets/'
 
 " Custom
+filetype plugin on
 "
 " Clean whitespace with ,W
 map <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
@@ -143,13 +150,11 @@ set smartindent
 set foldmethod=indent
 set nofoldenable
 
-filetype plugin on
-
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
+autocmd FileType sass setlocal shiftwidth=2 tabstop=2
 "inoremap <Nul> <C-x><C-o>
 
 function! SuperCleverTab()
@@ -166,7 +171,7 @@ function! SuperCleverTab()
     endif
 endfunction
 
-inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+"inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 " CTRL+Space autocomplete keybinding:   
 inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 \ "\<lt>C-n>" :
@@ -176,3 +181,4 @@ inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
 imap <C-@> <C-Space>
 
 let g:pydiction_location = '$HOME/.vim/bundle/pydiction/complete-dict'
+
