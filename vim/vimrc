@@ -154,7 +154,7 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType sass setlocal shiftwidth=2 tabstop=2
+"autocmd FileType sass setlocal shiftwidth=2 tabstop=2
 "inoremap <Nul> <C-x><C-o>
 
 function! SuperCleverTab()
