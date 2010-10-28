@@ -13,6 +13,7 @@ alias gba='git branch -a'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias glg5='git log --stat --max-count=5'
 alias gstash='git stash'
 alias gstasha='git stash apply'
 alias gcp='git cherry-pick'
