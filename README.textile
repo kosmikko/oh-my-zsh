@@ -6,6 +6,11 @@ Some minor changes + Google App Engine Plugin
 
 A handful of functions, auto-complete helpers, and stuff that makes you shout...
 
+h2. adding Vim plugins
+
+Example:
+@git submodule add https://github.com/wavded/vim-stylus.git vim/bundle/vim-stylus@
+
 bq. "OH MY ZSHELL!"
 
 h2. Setup
