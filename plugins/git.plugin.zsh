@@ -17,6 +17,7 @@ alias glg5='git log --stat --max-count=5'
 alias gstash='git stash'
 alias gstasha='git stash apply'
 alias gcp='git cherry-pick'
+alias gupbr='git fetch && git rebase origin/master'
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
