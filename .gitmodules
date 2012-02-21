@@ -37,3 +37,6 @@
 [submodule "st2/Django4ST2"]
 	path = st2/Django4ST2
 	url = https://github.com/squ1b3r/Django4ST2.git
+[submodule "ext/git-diff-grep"]
+	path = ext/git-diff-grep
+	url = https://github.com/oscardelben/git-diff-grep
