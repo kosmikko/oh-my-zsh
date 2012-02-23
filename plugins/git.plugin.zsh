@@ -39,5 +39,5 @@ alias ggpnp='git pull origin $(current_branch) && git push origin $(current_bran
 # update branch from master
 alias gupmaster='git pull origin master'
 alias gres='git reset --hard && git clean -f'
-alias gunstage = 'git reset HEAD'              # remove files from index (tracking)
-alias guncommit = 'git reset --soft HEAD^'     # go back before last commit, with files in uncommitted state
+alias gunstage='git reset HEAD'              # remove files from index (tracking)
+alias guncommit='git reset --soft HEAD^'     # go back before last commit, with files in uncommitted state
