@@ -12,3 +12,5 @@ EOF
 
 alias f='mdfind'
 alias gitx='/Applications/Work/GitX.app/Contents/MacOS/GitX . &'
+# requires https://github.com/trentm/json
+alias pastejson='pbpaste | json'
