@@ -14,3 +14,5 @@ alias f='mdfind'
 alias gitx='/Applications/Work/GitX.app/Contents/MacOS/GitX . &'
 # requires https://github.com/trentm/json
 alias pastejson='pbpaste | json'
+# copies your external ip to clipboard
+alias myip="curl http://icanhazip.com/ | pbcopy"
