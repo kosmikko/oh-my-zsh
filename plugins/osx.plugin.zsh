@@ -16,3 +16,10 @@ alias gitx='/Applications/Work/GitX.app/Contents/MacOS/GitX . &'
 alias pastejson='pbpaste | json'
 # copies your external ip to clipboard
 alias myip="curl http://icanhazip.com/ | pbcopy"
+# fix https://github.com/robbyrussell/oh-my-zsh/issues/433
+alias rake='noglob rake'
+
+. ~/.oh-my-zsh/bin/z/z.sh
+function precmd () {
+  _z --add "$(pwd -P)"
+}

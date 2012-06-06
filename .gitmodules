@@ -40,3 +40,6 @@
 [submodule "ext/git-diff-grep"]
 	path = ext/git-diff-grep
 	url = https://github.com/oscardelben/git-diff-grep
+[submodule "bin/z"]
+	path = bin/z
+	url = https://github.com/rupa/z.git
