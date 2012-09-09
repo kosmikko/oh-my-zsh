@@ -15,7 +15,7 @@ alias gitx='/Applications/Work/GitX.app/Contents/MacOS/GitX . &'
 # requires https://github.com/trentm/json
 alias pastejson='pbpaste | json'
 # copies your external ip to clipboard
-alias myip="curl http://icanhazip.com/ | pbcopy"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com | pbcopy"
 # fix https://github.com/robbyrussell/oh-my-zsh/issues/433
 alias rake='noglob rake'
 
@@ -130,3 +130,7 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
