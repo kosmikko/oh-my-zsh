@@ -18,8 +18,11 @@ alias pastejson='pbpaste | json'
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com | pbcopy"
 # fix https://github.com/robbyrussell/oh-my-zsh/issues/433
 alias rake='noglob rake'
-
+# requires pgrep
 alias pgrep='pgrep -fli'
+# View HTTP traffic, requires ngrep
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 . ~/.oh-my-zsh/bin/z/z.sh
 function precmd () {
