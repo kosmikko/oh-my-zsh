@@ -19,6 +19,8 @@ alias myip="curl http://icanhazip.com/ | pbcopy"
 # fix https://github.com/robbyrussell/oh-my-zsh/issues/433
 alias rake='noglob rake'
 
+alias pgrep='pgrep -fli'
+
 . ~/.oh-my-zsh/bin/z/z.sh
 function precmd () {
   _z --add "$(pwd -P)"
