@@ -24,6 +24,8 @@ alias pgrep='pgrep -fli'
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
+alias httpsserver="python ~/.oh-my-zsh/bin/server.py"
+
 . ~/.oh-my-zsh/bin/z/z.sh
 function precmd () {
   _z --add "$(pwd -P)"
