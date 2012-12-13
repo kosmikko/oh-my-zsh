@@ -41,3 +41,5 @@ alias gupmaster='git pull origin master'
 alias gres='git reset --hard && git clean -f'
 alias gunstage='git reset HEAD'              # remove files from index (tracking)
 alias guncommit='git reset --soft HEAD^'     # go back before last commit, with files in uncommitted state
+alias grev1='git reset --hard HEAD~1' #revert last commit
+alias gamend='git commit -a --amend'
