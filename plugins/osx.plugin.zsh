@@ -23,8 +23,8 @@ alias pgrep='pgrep -fli'
 # View HTTP traffic, requires ngrep
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
 alias httpsserver="python ~/.oh-my-zsh/bin/server.py"
+alias jake="noglob jake"
 
 . ~/.oh-my-zsh/bin/z/z.sh
 function precmd () {
@@ -148,3 +148,4 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
+alias fixairplay="sudo kill `ps -ax | grep 'coreaudiod' | grep 'sbin' |awk '{print $1}'`"
