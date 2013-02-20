@@ -148,4 +148,4 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
-alias fixairplay="sudo kill `ps -ax | grep 'coreaudiod' | grep 'sbin' |awk '{print $1}'`"
+alias fixairplay="sudo pkill coreaudiod"
